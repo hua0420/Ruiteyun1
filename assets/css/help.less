@@ -1,0 +1,88 @@
+// banner
+.banner{
+    position: relative;
+    .container-fluid{
+        .back{
+            a{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+// 内容
+.content{
+    padding: 0 0 5em;
+    .container{
+        .list{
+            .title{
+                font-size: 1.5em;
+                margin-bottom: .5em;
+            }
+            li{
+                .info{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #000;
+                    align-items: center;
+                    a{
+                        font-size: 1.5em;
+                        color: black;
+                        padding: .5em 0;
+                    }
+                    .icon{
+                        height: 3em;
+                    }
+                    label{
+                        font-size: 2em;
+                        margin-right: .5em;
+                        cursor: pointer;
+                        
+                    }
+                }
+                input{
+                    display: none;
+                }
+                input:checked ~ .icon{
+                    height: 2.5em;
+                    transition: all linear .3s;
+                }
+                .icon{
+                    width: 100%;
+                    height: 0em;
+                    font-size: 1.5em;
+                    background: #ff6800;
+                    line-height: 2.5em;
+                    text-align: center;
+                    z-index: 99;
+                    color: #fff;
+
+                }
+            }
+        }
+    }
+    @media screen and (max-width:700px) {
+        &{
+            .container{
+                .list{
+                    .title{
+                        font-size: 1em;
+                    }
+                    li{
+                        line-height: 3em;
+                        margin-bottom: 0;
+                        a{
+                            font-size: 1em;
+                        }
+                        span{
+                            font-size: 1.5em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

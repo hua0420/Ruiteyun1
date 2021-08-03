@@ -1,0 +1,362 @@
+// banner
+.banner{
+    position: relative;
+    .container-fluid{
+        .back{
+            a{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .title{
+        position: absolute;
+        top: 47%;
+        left: 40%;
+        font-size: 3em;
+    }
+    @media screen and (max-width:1200px) {
+        &{
+            .title{
+                font-size: 1.5em;
+            }
+        }
+    }
+    @media screen and (max-width:600px) {
+        &{
+            .title{
+                font-size: 1em;
+            }
+        }
+    }
+    @media screen and (max-width:470px) {
+        &{
+            .title{
+                display: none;
+            }
+        }
+    }
+}
+// 内容
+.content{
+    padding: 2em 0 5em;
+    background: #f8f7f7;
+    .container{
+        .infolist{
+            position: relative;
+            height: 100em;
+            width: 100%;
+            .morebox{
+                width: 80%;
+                text-align: center;
+                margin: 0 auto;
+                .more{
+                    display: flex;
+                    justify-content: space-around;
+                    label{
+                        width: 20%;
+                        display: inline-block;
+                        font-size: 1.6em;
+                        cursor: pointer;
+                        transition: all linear .5s;
+                        text-align: center;
+                        border-bottom: 3px solid transparent;
+                        &:hover{
+                            border-bottom: 3px solid #fcac45;
+                        }
+                    }
+                    
+                }
+            }
+            input{
+                display: none;
+            }
+            input:checked +.box{
+                opacity: 1;
+                z-index: 1;
+            }
+            #list1:checked ~ .morebox .more label[for="list1"],#list2:checked ~ .morebox .more label[for="list2"],#list3:checked ~ .morebox .more label[for="list3"]{
+                border-bottom: 3px solid #fcac45;
+            }
+            .box{
+                position: absolute;
+                top: 5%;
+                margin-top: 1em;
+                transition: all linear .3s;
+                opacity: 0;
+                .list:nth-child(1){
+                    margin-top: 6em;
+                    display: flex;
+                    justify-content: space-around;
+                    .left{
+                        width: 30%;
+                        .title{
+                            margin-top: 1em;
+                            font-size: 2em;
+                            color: #fcac45;
+                        }
+                        .info{
+                            margin-top: 1em;
+                            font-size: 1.3em
+                        }
+
+                    }
+                    .right{
+                        width: 35%;
+                    }
+                }
+                .list:nth-child(2){
+                    margin-top: 12em;
+                    display: flex;
+                    justify-content: space-around;
+                    .left{
+                        width: 30%;
+                        .title{
+                            margin-top: 1em;
+                            font-size: 2em;
+                            color: #fcac45;
+                        }
+                        .info{
+                            margin-top: 1em;
+                            font-size: 1.3em
+                        }
+
+                    }
+                    .right{
+                        width: 35%;
+                    }
+                }
+                .list:nth-child(3){
+                    margin-top: 10em;
+                    display: flex;
+                    justify-content: space-around;
+                    .left{
+                        width: 30%;
+                        margin-top: 8em;
+                        .title{
+                            margin-top: 1em;
+                            font-size: 2em;
+                            color: #fcac45;
+                        }
+                        .info{
+                            margin-top: 1em;
+                            font-size: 1.3em
+                        }
+
+                    }
+                    .right{
+                        width: 35%;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:980px) {
+        &{
+            .container{
+                .infolist{
+                    height: 52em;
+                    .box{
+                        .list:nth-child(1){
+                            margin-top: 2em;
+                            .left{
+                                .title{
+                                    margin-top: 1em;
+                                    font-size: 1.5em;
+                                }
+                                .info{
+                                    margin-top: 1em;
+                                    font-size: 1em
+                                }
+                            }
+                        }
+                        .list:nth-child(2){
+                            margin-top: 1em;
+                            .left{
+                                .title{
+                                    margin-top: 2em;
+                                    font-size: 1.5em;
+                                }
+                                .info{
+                                    margin-top: 1em;
+                                    font-size: 1em
+                                }
+                            }
+                        }
+                        .list:nth-child(3){
+                            margin-top: 3em;
+                            .left{
+                                margin-top: 3em;
+                                .title{
+                                    margin-top: 1em;
+                                    font-size: 1.5em;
+                                }
+                                .info{
+                                    margin-top: 1em;
+                                    font-size: 1em
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:750px) {
+        &{
+            .container{
+                .infolist{
+                    height: 43em;
+                    .morebox{
+                        .more{
+                            label{
+                                font-size: 1.2em;
+                            }
+                        }
+                    }
+                    .box{
+                        .list{
+                            .left{
+                                .info{
+                                    height:5em;
+                                    overflow-y: scroll;
+                                    /*修改滚动条样式*/
+                                    &::-webkit-scrollbar {
+                                        width: 20px;
+                                        height: 8px;
+                                    }
+                                    &::-webkit-scrollbar-thumb {
+                                        border-radius: 12px;
+                                        border: 8px solid rgba(0, 0, 0, 0);
+                                        box-shadow: 8px 0 0 #A5ADB7 inset;
+                                        box-shadow: 8px 0 0 rgba(175, 35, 35, 0.5) inset;
+                                    }
+                                    &::-webkit-scrollbar-thumb:hover {
+                                        box-shadow: 8px 0 0 rgb(184, 39, 39) inset;
+                                    }
+                                }
+                            }
+                        }
+                        .list:nth-child(1){
+                            .left{
+                                .title{
+                                    margin-top: 1em;
+                                    font-size: 1em;
+                                }
+                                .info{
+                                    margin-top: 1em;
+                                    font-size: .7em
+                                }
+                            }
+                        }
+                        .list:nth-child(2){
+                            .left{
+                                .title{
+                                    margin-top: 1em;
+                                    font-size: 1em;
+                                }
+                                .info{
+                                    margin-top: 1em;
+                                    font-size: .7em
+                                }
+                            }
+                        }
+                        .list:nth-child(3){
+                            .left{
+                                .title{
+                                    margin-top: 1em;
+                                    font-size: 1em;
+                                }
+                                .info{
+                                    margin-top: 1em;
+                                    font-size: .7em
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:600px) {
+        &{
+            .container{
+                .infolist{
+                    height: 36em;
+                    .morebox{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:500px) {
+        &{
+            .container{
+                .infolist{
+                    height: 23em;
+                    .morebox{
+                        width: 100%;
+                        .more{
+                            label{
+                                width: 50%;
+                                font-size: 1.2em;
+                            }
+                        }
+                    }
+                    .box{
+                        .list{
+                            .right{
+                                display: none;
+                            }
+                        }
+                        .list:nth-child(1){
+                            margin-top: 0;
+                            .left{
+                                width: 50%;
+                                .title{
+                                    margin-top: 0;
+                                    font-size: 1.2em;
+                                }
+                                .info{
+                                    margin-top: 0;
+                                    font-size: 1em
+                                }
+                            }
+                        }
+                        .list:nth-child(2){
+                            .left{
+                                width: 50%;
+                                .title{
+                                    margin-top: 0;
+                                    font-size: 1.2em;
+                                }
+                                .info{
+                                    margin-top: 0;
+                                    font-size: 1em
+                                }
+                            }
+                        }
+                        .list:nth-child(3){
+                            margin-top: 0;
+                            .left{
+                                width: 50%;
+                                margin-top: 1em;
+                                .title{
+                                    margin-top: 0;
+                                    font-size: 1.2em;
+                                }
+                                .info{
+                                    margin-top: 0;
+                                    font-size: 1em
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

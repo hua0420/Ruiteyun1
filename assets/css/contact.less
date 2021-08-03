@@ -1,0 +1,352 @@
+// banner
+.banner{
+    position: relative;
+    .container-fluid{
+        .back{
+            a{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .title{
+        position: absolute;
+        top: 47%;
+        left: 25%;
+        font-size: 3em;
+        color: #fff;
+    }
+    @media screen and (max-width:1200px) {
+        &{
+            .title{
+                font-size: 1.5em;
+            }
+        }
+    }
+    @media screen and (max-width:600px) {
+        &{
+            .title{
+                font-size: 1em;
+            }
+        }
+    }
+    @media screen and (max-width:470px) {
+        &{
+            .title{
+                display: none;
+            }
+        }
+    }
+}
+// 内容
+.content{
+    .container{
+        .listbox{
+            .top{
+                .title{
+                    font-size: 3em;
+                    text-align: center;
+                    color: #858585;
+                }
+                .info{
+                    color: #858585;
+                    font-size: 1.5em;
+                    margin-bottom: 5em;
+                }
+            }
+            .bottom{
+                background: url("../images/contact-background.png") no-repeat left top;
+                background-size: cover;
+                .one{
+                    width: 50%;
+                    padding: 3em 0;
+                    .title{
+                        width: 70%;
+                        font-size: 2em;
+                        color: #858585;
+                        text-align: center;
+                    }
+                    .info{
+                        font-size: 1.5em;
+                        color: #858585;
+                    }
+                }
+                .two{
+                    width: 50%;
+                    padding: 3em 0;
+                    .list{
+                        .title{
+                            width: 70%;
+                            font-size: 2em;
+                            color: #858585;
+                            text-align: center;
+                        }
+                        li{
+                            font-size: 1.5em;
+                            color: #858585;
+                            list-style: none;
+                            white-space: nowrap;
+                            overflow-x: hidden;
+                            text-overflow: ellipsis;
+                            span{
+                                display: inline-block;
+                                width: .4em;
+                                height: .4em;
+                                background: #858585;
+                                border-radius: 100%;
+                                margin-right: .5em;
+                            }
+                        }
+                    }
+                }
+                .three{
+                    width: 50%;
+                    padding: 3em 0;
+                    .list{
+                        .title{
+                            width: 70%;
+                            font-size: 2em;
+                            text-align: center;
+                            color: #858585;
+                        }
+                        li{
+                            font-size: 1.5em;
+                            color: #858585;
+                            white-space: nowrap;
+                            overflow-x: hidden;
+                            text-overflow: ellipsis;
+                            span{
+                                display: inline-block;
+                                width: .4em;
+                                height: .4em;
+                                background: #858585;
+                                border-radius: 100%;
+                                margin-right: .5em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1000px) {
+        &{
+            .container{
+                .listbox{
+                    .top{
+                        .title{
+                            font-size: 1.5em;
+                        }
+                        .info{
+                            font-size: 1em;
+                        }
+                    }
+                    .bottom{
+                        .one{
+                            .title{
+                                font-size: 1.5em;
+                            }
+                            .info{
+                                font-size: 1em;
+                            }
+                        }
+                        .two{
+                            .list{
+                                .title{
+                                    font-size: 1.5em;
+                                }
+                                li{
+                                    font-size: 1em;
+                                }
+                            }
+                        }
+                        .three{
+                            .list{
+                                .title{
+                                    font-size: 1.5em;
+                                }
+                                li{
+                                    font-size: 1em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:600px) {
+        &{
+            .container{
+                .listbox{
+                    .top{
+                        .info{
+                            margin-bottom: 3em;
+                        }
+                    }
+                    .bottom{
+                        .one{
+                            padding: 1em 0;
+                            margin: 0 auto;
+                            .title{
+                                margin: 0 auto;
+                            }
+                        }
+                        .two{
+                            padding: 1em 0;
+                            margin: 0 auto;
+                            .list{
+                                .title{
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                        .three{
+                            padding: 1em 0;
+                            margin: 0 auto;
+                            .list{
+                                .title{
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:500px) {
+        &{
+            .container{
+                .listbox{
+                    .top{
+                        .info{
+                            height:6em;
+                            overflow-y: scroll;
+                            margin-bottom: 1em;
+                            /*修改滚动条样式*/
+                            &::-webkit-scrollbar {
+                                width: 20px;
+                                height: 8px;
+                            }
+                            &::-webkit-scrollbar-thumb {
+                                border-radius: 12px;
+                                border: 8px solid rgba(0, 0, 0, 0);
+                                box-shadow: 8px 0 0 #A5ADB7 inset;
+                                box-shadow: 8px 0 0 rgba(175, 35, 35, 0.5) inset;
+                            }
+                            &::-webkit-scrollbar-thumb:hover {
+                                box-shadow: 8px 0 0 rgb(184, 39, 39) inset;
+                            }
+                        }
+                    }
+                    .bottom{
+                        .one{
+                            padding: .5em 0;
+                            .title{
+                                font-size: 1.2em;
+                            }
+                            .info{
+                                height:6em;
+                                overflow-y: scroll;
+                                /*修改滚动条样式*/
+                                &::-webkit-scrollbar {
+                                    width: 20px;
+                                    height: 8px;
+                                }
+                                &::-webkit-scrollbar-thumb {
+                                    border-radius: 12px;
+                                    border: 8px solid rgba(0, 0, 0, 0);
+                                    box-shadow: 8px 0 0 #A5ADB7 inset;
+                                    box-shadow: 8px 0 0 rgba(175, 35, 35, 0.5) inset;
+                                }
+                                &::-webkit-scrollbar-thumb:hover {
+                                    box-shadow: 8px 0 0 rgb(184, 39, 39) inset;
+                                }
+                            }
+                        }
+                        .two{
+                            padding: .5em 0;
+                            .list{
+                                .title{
+                                    font-size: 1.2em;
+                                }
+                            }
+                        }
+                        .three{
+                            padding: .5em 0;
+                            .list{
+                                .title{
+                                    font-size: 1.2em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// 联系我们
+.contact{
+    padding: 4em 0;
+    .container{
+        .title{
+            font-size: 3em;
+            color: #858585;
+            text-align: center;
+        }
+        .content{
+            .line{
+                display: flex;
+                justify-content: flex-start;
+                margin-bottom: .5em;
+                .info{
+                    font-size: 1.5em;
+                    color: #858585;
+                }
+            }
+            .map{
+                width: 100%;
+                height: 30em;
+                overflow: hidden;
+            }
+        }
+    }
+    @media screen and (max-width:800px){
+        &{
+            .container{
+                .title{
+                    font-size: 2em;
+                }
+                .content{
+                    .line{
+                        .info{
+                            font-size: 1em;
+                        }
+                    }
+                    .map{
+                        height: 20em;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:500px){
+        &{
+            padding: 2em 0;
+            .container{
+                .title{
+                    font-size: 1.5em;
+                }
+                .content{
+                    .map{
+                        height: 10em;
+                    }
+                }
+            }
+        }
+    }
+}
